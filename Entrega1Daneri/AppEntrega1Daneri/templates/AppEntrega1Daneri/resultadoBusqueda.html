@@ -1,0 +1,15 @@
+ {% extends "AppEntrega1Daneri/padre.html"%} 
+
+{% load static%}
+
+{% block titulo %}
+<h1 class="mb-5"> Resultados Busqueda</h1>
+{% endblock%}
+
+{% block contenidoQueCambia%}
+
+{% for curso in cursos %}
+		<h3> {{curso.nombre}} - {{curso.comision}} </h3>
+{% endfor %}
+
+{% endblock%}

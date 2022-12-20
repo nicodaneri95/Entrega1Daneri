@@ -1,0 +1,37 @@
+{% extends "AppEntrega1Daneri/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    <h1 class="mb-5"> Inicio</h1>
+    {% endblock%}
+
+{% block contenidoQueCambia %}
+
+    
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    
+    <h3>{{mensaje}}</h3>
+    
+    
+   
+
+    
+
+    {% if cursos %}
+
+    <p>Estamos buscando el: {{comision}}</p>
+
+    <ul>
+	{% for curso in cursos %}
+		<li> {{curso.nombre}} </li>
+		<li> {{curso.comision}} </li>
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+    
+
+{% endblock %}
